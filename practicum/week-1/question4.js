@@ -14,7 +14,7 @@ var howManyCommon = function(A, B) {
  let match = 0;
  for(var i=0;i<B.length; i++){
   for(var j=0;j<A.length; j++){
-   if(B[i] === A[j] && !seen){
+   if(B[i] === A[j]){
      match++;
    }
   }
