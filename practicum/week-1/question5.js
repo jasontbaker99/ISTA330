@@ -11,7 +11,21 @@ output: 3
 12 divided by 4 becomes 3 which divided by 3 becomes 1. The third and last step is the substraction by one operation.
 */
 
-var minimalReduction = function(n) {
 
+var minimalReduction = function(n) {
+  let count = 0;
+  while(n !== 0){
+    count++;
+    if(n >= 4 && (n/4)%1 === 0){
+       n = n/4;
+    }
+    else if(n >= 3 && (n/4)%1 === 0){
+       n = n/3;
+    }
+    else{
+      n--; 
+    }
+  }
+  return count;
 };
 
