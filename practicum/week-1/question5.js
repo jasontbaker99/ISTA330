@@ -19,13 +19,13 @@ var minimalReduction = function(n) {
     if(n >= 4 && (n/4)%1 === 0){
        n = n/4;
     }
-    else if(n >= 3 && (n/4)%1 === 0){
+    else if(n >= 3 && (n/3)%1 === 0){
        n = n/3;
     }
     else{
       n--; 
     }
   }
-  return count--;
+  return count;
 };
 
