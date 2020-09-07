@@ -17,4 +17,5 @@ var maxMinusMin = function(n) {
     if(mn > parseInt(s[i])){mn = parseInt(s[i])}
   }
   sum = mx - mn;
+  return sum;
 }
