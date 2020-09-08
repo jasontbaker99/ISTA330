@@ -9,5 +9,21 @@ Given n, calculate F(n).
 */
 
 var F = function(n) {
-
+  let num = 0;
+  if(n == 0){num = 0}
+  if(n == 1){num = 1}
+  if(n >= 2){
+    let count = 1;
+    let prev1 = 1;
+    let prev2 = 0;
+    let curr;
+    while(count != n){
+      curr = prev1 + prev2;
+      prev2 = prev1;
+      prev1 = curr;
+      count ++;
+    }
+    num = curr;
+  }
+  return num;
 };
