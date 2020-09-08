@@ -14,7 +14,11 @@ output: [
 
 var PascalTriangle = function(n) {
   let row = [];
-  let triangle = [1];
+  let triangle = [];
+  if(n > 0){
+    let temp = [1];
+    triangle.push(temp);
+  }
   for(var i=0;i<n-1;i++){
     let temp = row
     row = [1];
