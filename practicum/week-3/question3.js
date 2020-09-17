@@ -9,5 +9,16 @@ output: true
 */
 
 var kStepAway = function(input, k) {
-
+  let count = 0;
+  for(let i=0;i<input.length;i++){
+    if(input[i]==1 && i != 0){
+      if(count < k){
+        return false;
+      }
+      count = 0;
+    }else{
+      count++;
+    }
+  }
+  return true;
 };
