@@ -25,5 +25,13 @@ output:  4
 */
 
 var longestNested = function(A) {
-
+  let used = [];
+  let curr = A[0];
+  let sum = 0;
+  while(!used.includes(curr)){
+    used.push(curr);
+    curr = A[curr];
+    sum++;
+  }
+  return sum;
 };
