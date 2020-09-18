@@ -11,5 +11,14 @@ output: 1
 */
 
 var minMoves = function(A) {
-
+  let sum = 0;
+  let temp = [];
+  for(let i=0;i<A.length;i++){
+    while(temp.includes(A[i])){
+      A[i] = A[i]+1;
+      sum++;
+    }
+    temp.push(A[i]);
+  }
+  return sum;
 };
