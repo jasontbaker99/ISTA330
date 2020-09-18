@@ -28,7 +28,7 @@ var minP = function(M, m, n) {
       return M[m][n] + minP(M, m, n-1);    
     }
     if(n < 0){
-       return M[m][n] + (minP(M, m-1, n); 
+       return M[m][n] + minP(M, m-1, n); 
     }
     return M[m][n] + Math.min(minP(M, m-1, n), minP(M, m, n-1) ); 
   } 
