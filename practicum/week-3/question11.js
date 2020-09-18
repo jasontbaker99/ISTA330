@@ -35,5 +35,54 @@ output: 4
 */
 
 var romanToInteger = function(s) {
-
+  let sum = 0;
+  let last = false;
+  for(let i=0;i<s.length-1;i++){
+    if(i+1 === s.length){
+      last = true;
+    }
+    if(s[i] === "I" && (s[i+1] === "V" || s[i+1] === "X")){
+      if(s[i+1] === "V"){
+        sum = sum + 4;
+      }else{
+        sum = sum +9;
+      }
+      last = false;
+      i++;
+    }else if(s[i] === "X" && (s[i+1] === "L" || s[i+1] === "C")){
+      if(s[i+1] === "L"){
+        sum = sum + 40;
+      }else{
+        sum = sum +90;
+      }
+      last = false;
+      i++
+    }else if(s[i] === "C" && (s[i+1] === "D" || s[i+1] === "M")){
+      if(s[i+1] === "D"){
+        sum = sum + 400;
+      }else{
+        sum = sum +900;
+      }
+      last = false;
+      i++;
+    }else if(s[i] === "I"){
+      sum = sum + 1;
+    }else if(s[i] === "V"){
+      sum = sum + 5;
+    }else if(s[i] === "X"){
+      sum = sum + 10;
+    }else if(s[i] === "L"){
+      sum = sum + 50;
+    }else if(s[i] === "C"){
+      sum = sum + 100;
+    }else if(s[i] === "D"){
+      sum = sum + 50;
+    }else if(s[i] === "M"){
+      sum = sum + 1000;
+    }
+  }
+  if(last){
+    sum = sum + s[s.length];
+  }
+  return sum;
 };
