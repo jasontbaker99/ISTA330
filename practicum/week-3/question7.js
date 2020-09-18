@@ -17,5 +17,13 @@ output: 7
 */
 
 var minPath = function(M) {
+  return minP(M,M.length-1,M[0].length-1);//M.length-1,M[0].length-1);  
+};
 
+var minP = function(M, m, n) { 
+  if (m == 0 && n == 0) {
+    return M[m][n]; 
+  }else{
+    return M[m][n] + Math.min(minP(M, m-1, n), minP(M, m, n-1) ); 
+  } 
 };
