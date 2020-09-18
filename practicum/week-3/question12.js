@@ -26,8 +26,10 @@ var isCrossing = function(s) {
     if(s[i] === "W"){
       coor[0] = coor[0]-1;
     }
-    if(been.includes(coor)){
-      return true;
+    for(let j=0;j<been.length;j++){
+      if(been[j][0] === coor[0] && been[j][1] === coor[1]){
+        return true;
+      }
     }
     let temp = [0,0];
     temp[0] = coor[0];
