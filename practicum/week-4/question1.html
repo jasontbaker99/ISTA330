@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
 </head>
 <body>
     <div id="question">
@@ -54,18 +59,17 @@
         
        let func = function(){
          let d = document.getElementById('flowersDiv');
-         d.innerHTML = "";
-         d.innerHTML += ('<table><tr>one');
-         for(let i=0;i<flowers.length;i++){
-           if(flowers.length/2 === i){
-             d.innerHTML += ('</tr><br>');
-             d.innerHTML += ('<tr>two');
-           }
-           d.innerHTML += ('<td style="text-align:center">');
-           d.innerHTML += ('<img src="images/'+flowers[i].picture+'">'+flowers[i].name);
-           d.innerHTML += ('</td>');
-          }
-          d.innerHTML += ('</tr></table>');
+         var HTML = "<table><tr>";
+	     for(i=0;i<flowers.length;i++)
+	   	 {
+         	if(i === flowers.length/2){
+            	HTML += "</tr><tr>";
+            }
+   			HTML += "<td align=center><img src=\"images/'+flowers[i].picture+'\"><br>"+flowers[i].name+"</td>";
+	 	 }
+	     HTML += "</tr></table>";
+		 document.getElementById("flowersDiv").innerHTML = HTML;
+         
        }
 
        func();
