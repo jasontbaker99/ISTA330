@@ -54,12 +54,14 @@
         
        let func = function(){
          let d = document.getElementById('flowersDiv');
+         d.insertAdjacentHTML('<table><tr>');
          for(let i=0;i<flowers.length;i++){
            if(flowers.length/2 === i){
-             d.insertAdjacentHTML("afterbegin",'<br>');
+             d.insertAdjacentHTML("afterbegin",'</tr><tr>');
            }
-           d.insertAdjacentHTML("afterbegin",'<img src="images/'+flowers[i].picture+'">'+flowers[i].name);
-         }
+           d.insertAdjacentHTML("afterbegin",'<td><img src="images/'+flowers[i].picture+'">'+flowers[i].name+'</td>');
+          }
+          d.insertAdjacentHTML("afterbegin",'</tr>');
        }
 
        func();
