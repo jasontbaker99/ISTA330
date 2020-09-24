@@ -60,7 +60,9 @@
            if(flowers.length/2 === i){
              d.innerHTML += ('</tr><tr>');
            }
-           d.innerHTML += ('<td><img src="images/'+flowers[i].picture+'">'+flowers[i].name+'</td>');
+           d.innerHTML += ('<td>');
+           d.innerHTML += ('<img src="images/'+flowers[i].picture+'">'+flowers[i].name);
+           d.innerHTML += ('</td>');
           }
           d.innerHTML += ('</tr></table>');
        }
