@@ -59,10 +59,12 @@
          for(let i=0;i<flowers.length;i++){
            if(flowers.length/2 === i){
              d.innerHTML += ('</tr><br><tr>');
+             //d.innerHTML += ('<br>');
            }
            d.innerHTML += ('<td><div width="100px;" style="text-align:center;"><img src="images/'+flowers[i].picture+'"><p>'+flowers[i].name+'</p></div></td>');
+           //d.innerHTML += ('<div width="100px;" style="text-align:center;"><img src="images/'+flowers[i].picture+'"><p>'+flowers[i].name+'</p></div>');
           }
-          d.innerHTML += ('</tr>');
+          d.innerHTML += ('</tr></table>');
        }
 
        func();
