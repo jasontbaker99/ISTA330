@@ -55,16 +55,16 @@
        let func = function(){
          let d = document.getElementById('flowersDiv');
          d.innerHTML = "";
-         d.innerHTML += ('<table><tr>');
+         //d.innerHTML += ('<table><tr>');
          for(let i=0;i<flowers.length;i++){
            if(flowers.length/2 === i){
-             d.innerHTML += ('</tr><br><tr>');
-             //d.innerHTML += ('<br>');
+             //d.innerHTML += ('</tr><br><tr>');
+             d.innerHTML += ('<br>');
            }
-           d.innerHTML += ('<td><div width="100px;" style="text-align:center;"><img src="images/'+flowers[i].picture+'"><p>'+flowers[i].name+'</p></div></td>');
-           //d.innerHTML += ('<div width="100px;" style="text-align:center;"><img src="images/'+flowers[i].picture+'"><p>'+flowers[i].name+'</p></div>');
+           //d.innerHTML += ('<td><div width="100px;" style="text-align:center;"><img src="images/'+flowers[i].picture+'"><p>'+flowers[i].name+'</p></div></td>');
+           d.innerHTML += ('<div width="100px;" style="text-align:center;"><img src="images/'+flowers[i].picture+'"><p>'+flowers[i].name+'</p></div>');
           }
-          d.innerHTML += ('</tr></table>');
+          //d.innerHTML += ('</tr></table>');
        }
 
        func();
