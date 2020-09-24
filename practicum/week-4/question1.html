@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+<style>
+.flowerstd{
+  width:200px;
+  text-align:center;
+  display:block;
+  background-color: transparent;
+  border: 1px solid transparent;
+  margin-right: 10px;
+  margin-bottom: 1px;
+  float:left;
+}
+</style>
 </head>
 <body>
     <div id="question">
@@ -14,7 +26,7 @@
         For each flower, you should show the image
         and under the image display its name.
     </div>
-    <div id='flowersDiv'>
+    <div class='flowersDiv' id='flowersDiv'>
 
     </div>
     <script>
@@ -60,7 +72,7 @@
            if(flowers.length/2 === i){
              d.innerHTML += ('</tr><br><tr>');
            }
-           d.innerHTML += ('<td><divstyle = "text-align: center";> <img src="images/'+flowers[i].picture+'">'+flowers[i].name+'</div></td>');
+           d.innerHTML += ('<td><div class = "flowerstd"><img src="images/'+flowers[i].picture+'">'+flowers[i].name+'</div></td>');
           }
           d.innerHTML += ('</tr>');
        }
