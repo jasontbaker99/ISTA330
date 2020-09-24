@@ -58,10 +58,11 @@
          d.innerHTML += ('<table><tr>');
          for(let i=0;i<flowers.length;i++){
            if(flowers.length/2 === i){
-             d.innerHTML += ('</tr><tr>');
+             d.innerHTML += ('</tr><br>');
+             d.innerHTML += ('<tr>');
            }
-           d.innerHTML += ('<td>');
-           d.innerHTML += ('<img src="images/'+flowers[i].picture+'"><p>'+flowers[i].name+'</p>');
+           d.innerHTML += ('<td style="text-align:center">');
+           d.innerHTML += ('<img src="images/'+flowers[i].picture+'">'+flowers[i].name);
            d.innerHTML += ('</td>');
           }
           d.innerHTML += ('</tr></table>');
