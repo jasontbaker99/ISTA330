@@ -55,11 +55,11 @@
        let func = function(){
          let d = document.getElementById('flowersDiv');
          d.innerHTML = "";
-         d.innerHTML += ('<table><tr>');
+         d.innerHTML += ('<table><tr>one');
          for(let i=0;i<flowers.length;i++){
            if(flowers.length/2 === i){
              d.innerHTML += ('</tr><br>');
-             d.innerHTML += ('<tr>');
+             d.innerHTML += ('<tr>two');
            }
            d.innerHTML += ('<td style="text-align:center">');
            d.innerHTML += ('<img src="images/'+flowers[i].picture+'">'+flowers[i].name);
