@@ -54,12 +54,12 @@
         
        let func = function(){
          let d = document.getElementById('flowersDiv');
-         d.insertAdjacentHTML('<table><tr>');
+         d.insertAdjacentHTML("afterbeigin",'<table><tr>');
          for(let i=0;i<flowers.length;i++){
            if(flowers.length/2 === i){
              d.insertAdjacentHTML("afterbegin",'</tr><tr>');
            }
-           d.insertAdjacentHTML("afterbegin",'<td><img src="images/'+flowers[i].picture+'">'+flowers[i].name+'</td>');
+           d.insertAdjacentHTML("afterbegin",'<td><img src="images/'+flowers[i].picture+'"> <div style="text-align: center;"'>'+flowers[i].name+'</div></td>');
           }
           d.insertAdjacentHTML("afterbegin",'</tr>');
        }
