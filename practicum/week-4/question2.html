@@ -100,7 +100,58 @@
             rose,
             waterlily
         ];
+        
+        let farray = [];
+
+        let sorting = function(){
+          for(let i=0;i<flowers.length;i++){
+            farray.push(flowers[i].name);
+          }
+          farray = farray.sort();
+        }
+
+        let func = function(){
+          var HTML = "<table><tr>";
+	        for(let i=0;i<flowers.length;i++){
+           	if(i === flowers.length/2){
+              HTML += "</tr><tr>";
+            }
+   		      HTML += '<td align=center><img onclick=\"change(\''+flowers[i].name+'\')\" src=\"images/'+flowers[i].picture+'\"><br>'+flowers[i].name+'</td>';
+	        }
+	        HTML += "</tr></table>";
+	        document.getElementById("flowersDiv").innerHTML = HTML;
+        }
+
+        sorting();
+
+        func();
+
+        function change(e){
+          let newflowers = [];
+          let findex = 0;
+          let index = 0;
+          for(let i=0;i<flowers.length;i++){
+            if(farray[i] === e){
+              index = i;
+            }
+          }
+          for(let i=index;i<flowers.length;i++){
+            for(let j=0;j<flowers.length;j++){
+              if(flowers[j].name === farray[i]){
+                newflowers.push(flowers[j]);
+              }
+            }
+          }
+          for(let i=0;i<index;i++){
+            for(let j=0;j<flowers.length;j++){
+              if(flowers[j].name === farray[i]){
+                newflowers.push(flowers[j]);
+              }
+            }
+          }
+          flowers = newflowers;
+          func();
+        }
+        
     </script>
 </body>
-
-</html>
