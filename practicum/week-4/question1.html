@@ -58,17 +58,15 @@
        ];
         
        let func = function(){
-         let d = document.getElementById('flowersDiv');
          var HTML = "<table><tr>";
-	     for(i=0;i<flowers.length;i++)
-	   	 {
+	     for(i=0;i<flowers.length;i++){
          	if(i === flowers.length/2){
-            	HTML += "</tr><tr>";
-            }
-   			HTML += "<td align=center><img src='images/'+flowers[i].picture+'><br>"+flowers[i].name+"</td>";
-	 	 }
+            	   HTML += "</tr><tr>";
+                }
+   		HTML += "<td align=center><img src='images/'+flowers[i].picture+'><br>"+flowers[i].name+"</td>";
+	     }
 	     HTML += "</tr></table>";
-		 document.getElementById("flowersDiv").innerHTML = HTML;
+	     document.getElementById("flowersDiv").innerHTML = HTML;
          
        }
 
